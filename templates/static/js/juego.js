@@ -1,8 +1,9 @@
-        var canvasWidth = 900;
-        var canvasHeight = 500;
+        //varibales 
+        var canvasWidth = 900; // ancho del canvas 
+        var canvasHeight = 500; // altura del canvas
         //Creación de la variable 
-        var player;
-        var playerYPosition = 200;
+        var player;   // jugador 
+        var playerYPosition = 200; // posición del jugardor 
 
         var fallSpeed = 0;
         var interval = setInterval(updateCanvas, 20);
@@ -44,7 +45,7 @@ function createPlayer(width, height, x) {
     this.draw = function() {
         ctx = gameCanvas.context;
         ctx.fillStyle = "yellow"
-        ctx.fillRect(this.x, this.y, this.width, this.height, );
+        ctx.fillRect(this.x, this.y, this.width, this.height, this.radius , Math.PI * 2, false);
     }
     this.makeFall = function() {
         if (!isJumping) {
