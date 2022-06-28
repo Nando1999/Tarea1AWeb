@@ -43,8 +43,8 @@ function createPlayer(width, height, x) {
     
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.fillStyle.src = "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/2DD297B4_9BA0_4828_A4A2_149A8A73AF52.png"
-        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fillStyle = "yellow"
+        ctx.fillRect(this.x, this.y, this.width, this.height, );
     }
     this.makeFall = function() {
         if (!isJumping) {
@@ -77,7 +77,7 @@ function createBlock() {
     
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.fillStyle = "white";
+        ctx.fillStyle = "green";
         ctx.fillRect(this.x, this.y, width, height);
     }
     this.attackPlayer = function() {
@@ -121,7 +121,7 @@ function createScoreLabel(x, y) {
     this.draw = function() {
         ctx = gameCanvas.context;
         ctx.font = "35px Marker Felt";
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "Black";
         ctx.fillText(this.text, this.x, this.y);
     }
 }
