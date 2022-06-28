@@ -43,7 +43,7 @@ function createPlayer(width, height, x) {
     
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.fillStyle = "green";
+        ctx.fillStyle.image = ();
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.makeFall = function() {
@@ -77,7 +77,7 @@ function createBlock() {
     
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.fillStyle = "red";
+        ctx.fillStyle = "white";
         ctx.fillRect(this.x, this.y, width, height);
     }
     this.attackPlayer = function() {
