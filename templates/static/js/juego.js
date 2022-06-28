@@ -3,15 +3,15 @@
         var canvasHeight = 500; // altura del canvas
         //Creación de la variable 
         var player;   // jugador 
-        var playerYPosition = 200; // posición del jugardor 
+        var playerYPosition = 200; // variable  posición-Y del jugardor 
 
-        var fallSpeed = 0;
-        var interval = setInterval(updateCanvas, 20);
+        var fallSpeed = 0; //caida de velocidad inicalizada en 0 
+        var interval = setInterval(updateCanvas, 20); // establecer el intervalo y actualiza 
 
-        var isJumping = false;
-        var jumpSpeed = 0;
+        var isJumping = false; //esta saltando va ser ingual a false 
+        var jumpSpeed = 0;// velocidad de salto inicializada en 0 
 
-        var block;
+        var block; // bloque
 
         // Crear una puntuación de 0 para empezar
         var score = 0;
@@ -20,6 +20,7 @@
 
         function startGame() {
             gameCanvas.start();
+            // crea el jugador o función 
             player = new createPlayer(30, 30, 10);
             block = new createBlock();
         // Asigne a su variable scoreLabel un valor de scoreLabel()
@@ -35,17 +36,17 @@
                 document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     }
 }
-
+// crear una función llamada crear jugador
 function createPlayer(width, height, x) {
-    this.width = width;
-    this.height = height;
-    this.x = x;
-    this.y = playerYPosition;
+    this.width = width; //ancho jugador
+    this.height = height; //altura juador
+    this.x = x; //posiscion x
+    this.y = playerYPosition;// posicion Y 
     
-    this.draw = function() {
-        ctx = gameCanvas.context;
-        ctx.fillStyle = "yellow"
-        ctx.fillRect(this.x, this.y, this.width, this.height, this.radius , Math.PI * 2, false);
+    this.draw = function() { //dibujar 
+        ctx = gameCanvas.context; //juego canvas
+        ctx.fillStyle = "yellow" //color de la figura
+        ctx.fillRect(this.x, this.y, this.width, this.height );
     }
     this.makeFall = function() {
         if (!isJumping) {
