@@ -1,5 +1,5 @@
-        var canvasWidth = 600;
-        var canvasHeight = 400;
+        var canvasWidth = 900;
+        var canvasHeight = 500;
         //Creación de la variable 
         var player;
         var playerYPosition = 200;
@@ -43,7 +43,7 @@ function createPlayer(width, height, x) {
     
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.fillStyle.image = ();
+        ctx.fillStyle.src = "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/2DD297B4_9BA0_4828_A4A2_149A8A73AF52.png"
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.makeFall = function() {
@@ -120,7 +120,7 @@ function createScoreLabel(x, y) {
     this.y = y;
     this.draw = function() {
         ctx = gameCanvas.context;
-        ctx.font = "25px Marker Felt";
+        ctx.font = "35px Marker Felt";
         ctx.fillStyle = "black";
         ctx.fillText(this.text, this.x, this.y);
     }
